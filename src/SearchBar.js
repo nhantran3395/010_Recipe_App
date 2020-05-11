@@ -41,17 +41,14 @@ function SearchBar() {
   }, [queryTerm]);
 
   return (
-    <div>
-      <h2>I am SearchBar</h2>
-      <form onSubmit={updateQueryTerm}>
-        <input
-          placeholder="Food"
-          type="text"
-          onChange={updateFoodInput}
-        ></input>
-        <button type="submit">Search</button>
-      </form>
-    </div>
+    <form className="search-bar" onSubmit={updateQueryTerm}>
+      <input
+        placeholder="Please input the main ingredient"
+        type="text"
+        onChange={updateFoodInput}
+      ></input>
+      <button type="submit">Search</button>
+    </form>
   );
 }
 
