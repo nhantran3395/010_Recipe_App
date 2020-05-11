@@ -1,0 +1,8 @@
+.recipe-wrapper {
+  flex: 1 1 30rem;
+  justify-content: center;
+}
+
+.recipe-wrapper ul {
+  list-style: none;
+}
