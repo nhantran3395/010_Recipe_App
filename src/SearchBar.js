@@ -35,6 +35,7 @@ function SearchBar() {
   };
 
   useEffect(() => {
+    setRecipes([]);
     getRecipe().then((recipes) => {
       setRecipes(recipes.hits);
     });
