@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: rgba(255, 160, 122, 0.3);
 }
 
 h1 {
@@ -49,7 +50,8 @@ ul {
 }
 
 button {
-  padding: 2rem 6rem;
+  padding: 1.5rem 6rem;
+  height: 5vh;
   background-color: rgb(255, 160, 122);
   border: none;
   color: white;
@@ -63,13 +65,44 @@ button:hover {
   background-color: rgb(233, 150, 122);
 }
 
-body {
-  background-color: rgba(255, 160, 122, 0.3);
+/*NAV STYLES*/
+
+.main-header {
+  width: 100%;
+  background-color: rgb(255, 160, 122);
+  color: white;
+  top: 0px;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  width: 90%;
+  min-height: 5vh;
+  margin: auto;
+  padding: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logo {
+  display: flex;
+  flex: 2 1 40rem;
+  align-items: center;
+  font-family: "Pattaya", sans-serif;
+  font-weight: normal;
 }
 
 /*APP STYLES*/
 .App {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -79,22 +112,47 @@ body {
 
 /*SEARCH BAR STYLES*/
 .search-bar {
-  margin: 5rem;
+  margin-bottom: 5rem;
   width: 100%;
+  height: 45vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), transparent),
+    url("./img/salmon_quality_reduced.jpg");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
 }
 
-.search-bar input {
+.search-bar-input-wrapper {
   width: 50%;
+  position: relative;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar-input-wrapper input {
+  width: 100%;
+  height: 5vh;
   border-radius: 0.5rem;
   border: 0;
   -webkit-appearance: none;
   padding-left: 3rem;
 }
 
+/* .search-bar-input-wrapper button {
+  height: 80%;
+  background-color: rgba(211, 211, 211);
+  position: absolute;
+  right: 1rem;
+  padding: 1.5rem 3rem;
+} */
+
 /*RECIPE LIST STYLES*/
 .recipe-list {
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -108,7 +166,7 @@ body {
   padding: 2rem;
   box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1),
     0rem 2rem 2rem rgba(0, 0, 0, 0.2);
-  background: linear-gradient(#fad0c4, #ffd1ff);
+  background: rgba(255, 160, 122, 0.4);
 }
 
 .recipe-wrapper ul {

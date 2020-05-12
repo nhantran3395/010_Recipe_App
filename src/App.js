@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "./NavBar";
 import SearchBar from "./SearchBar";
 import { RecipeProvider } from "./RecipeContext";
 import RecipeList from "./RecipeList";
@@ -10,6 +11,7 @@ function App() {
     <RecipeProvider>
       <ThemeProvider theme={theme}>
         <div className="App">
+          <NavBar />
           <SearchBar />
           <RecipeList />
         </div>

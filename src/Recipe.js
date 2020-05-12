@@ -16,11 +16,7 @@ function Recipe(props) {
       <h4 className="recipe-calories">{`${Math.round(
         recipe.calories
       )} kcal`}</h4>
-      {/* <ul className="recipe-ingredients">
-        {recipe.ingredientLines.map((ingredient) => {
-          return <li>{ingredient}</li>;
-        })}
-      </ul> */}
+      <h4>{`By ${recipe.source}`}</h4>
     </div>
   );
 }

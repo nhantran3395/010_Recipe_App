@@ -6,13 +6,13 @@ function SearchBar() {
   const apiHost = "edamam-recipe-search.p.rapidapi.com";
   const recipeUrl = "https://edamam-recipe-search.p.rapidapi.com/search";
 
-  const [foodInput, setFoodInput] = useState(() => "");
-  const [queryTerm, setQueryTerm] = useState(() => "chicken");
+  const [recipeInput, setrecipeInput] = useState(() => "");
+  const [queryTerm, setQueryTerm] = useState(() => "egg benedict");
   const [recipes, setRecipes] = useContext(RecipeContext);
 
   const getRecipe = async () => {
     try {
-      const response = await fetch(`${recipeUrl}?q=${queryTerm}`, {
+      const response = await fetch(`${recipeUrl}?q=${queryTerm}&to=12`, {
         method: "GET",
         headers: {
           "x-rapidapi-host": apiHost,
@@ -25,29 +25,32 @@ function SearchBar() {
     }
   };
 
-  const updateFoodInput = (event) => {
-    setFoodInput(event.target.value);
+  const updaterecipeInput = (event) => {
+    setrecipeInput(event.target.value);
   };
 
   const updateQueryTerm = (event) => {
     event.preventDefault();
-    setQueryTerm(foodInput);
+    setQueryTerm(`${recipeInput}`);
   };
 
   useEffect(() => {
     setRecipes([]);
     getRecipe().then((recipes) => {
+      console.log(recipes);
       setRecipes(recipes.hits);
     });
   }, [queryTerm]);
 
   return (
     <form className="search-bar" onSubmit={updateQueryTerm}>
-      <input
-        placeholder="Please input the main ingredient"
-        type="text"
-        onChange={updateFoodInput}
-      ></input>
+      <div className="search-bar-input-wrapper">
+        <input
+          placeholder="Egg Benedict"
+          type="text"
+          onChange={updaterecipeInput}
+        ></input>
+      </div>
       <button type="submit">Search</button>
     </form>
   );
