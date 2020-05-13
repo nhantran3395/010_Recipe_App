@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { RecipeContext } from "./RecipeContext";
+import { Select, MenuItem } from "@material-ui/core";
 
 function SearchBar() {
   const apiKey = "8a37f7216dmsh504d9ee1a9bf834p18e310jsn01b6a092ebfb";
@@ -50,6 +51,15 @@ function SearchBar() {
           type="text"
           onChange={updaterecipeInput}
         ></input>
+        {/* <Select className="search-bar-input-select" value="Diet Label">
+          <MenuItem value="">
+            <em>None</em>
+          </MenuItem>
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select> */}
+        <button>Ingredient</button>
       </div>
       <button type="submit">Search</button>
     </form>

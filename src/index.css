@@ -142,13 +142,21 @@ nav ul {
   padding-left: 3rem;
 }
 
-/* .search-bar-input-wrapper button {
+/* .search-bar-input-select {
+  height: 80%;
+  background-color: rgba(211, 211, 211);
+  position: absolute;
+  right: 10rem;
+  padding: 1.5rem 3rem;
+} */
+
+.search-bar-input-wrapper button {
   height: 80%;
   background-color: rgba(211, 211, 211);
   position: absolute;
   right: 1rem;
   padding: 1.5rem 3rem;
-} */
+}
 
 /*RECIPE LIST STYLES*/
 .recipe-list {
@@ -161,7 +169,9 @@ nav ul {
 /*RECIPE STYLES*/
 .recipe-wrapper {
   flex: 1 1 25rem;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   margin: 1rem;
   padding: 2rem;
   box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1),
@@ -171,4 +181,15 @@ nav ul {
 
 .recipe-wrapper ul {
   list-style: none;
+}
+
+/*RECIPE EXPANSION PANEL STYLES*/
+.recipe-expansion-panel {
+  margin-top: 2rem;
+}
+
+.recipe-expansion-panel-detail {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import RecipeExpansionPanel from "./RecipeExpansionPanel";
 
 function Recipe(props) {
   const recipe = props.recipe.recipe;
@@ -17,6 +18,7 @@ function Recipe(props) {
         recipe.calories
       )} kcal`}</h4>
       <h4>{`By ${recipe.source}`}</h4>
+      <RecipeExpansionPanel ingredientLines={recipe.ingredientLines} />
     </div>
   );
 }
