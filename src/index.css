@@ -119,7 +119,7 @@ nav ul {
   justify-content: center;
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.2), transparent),
-    url("./img/salmon_quality_reduced.jpg");
+    url("./img/salmon_quality_reduced_720.jpg");
   background-position: center;
   background-repeat: none;
   background-size: cover;
@@ -192,4 +192,26 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 780px) {
+  #logo {
+    justify-content: center;
+  }
+  button {
+    padding: 0.5rem 3rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .search-bar-input-wrapper button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
 }
